@@ -19,8 +19,8 @@ thì bảo trì giống như một cơn ác mộng với những người khác.
     API của bạn có thể có những giới hạn tỉ lệ trong  chế độ`production` và chặn các việc gọi phương thức test sau khi đã
     có một lượng lớn request đã được đưa ra.
 
-* Đặt các file thử nghiệm ngay bên cạnh các module đã test mà sử dụng `*.test.js` hoặc `*.spec.js` để đặt tên 
-theo quy ước, ví dụ như `moduleName.spec.js`.
+* Đặt các file thử nghiệm ngay bên cạnh các module đã test ~~mà sử dụng `*.test.js` hoặc `*.spec.js` để đặt tên 
+theo quy ước, ví dụ như `moduleName.spec.js`~~  **bằng cách sử dụng quy ước đặt tên `*.test.js` hoặc `*.spec.js`, như `moduleName.spec.js`** (using `*.test.js` or `*.spec.js` naming convention, like `moduleName.spec.js`.).
 
     _Tại sao:_
     > Bạn không muốn đào sâu vào một cấu trục thư mục để tìm một nơi thử nghiệm [Xem thêm...](https://hackernoon.com/structure-your-javascript-code-for-testability-9bc93d9c72dc) 
@@ -29,7 +29,7 @@ theo quy ước, ví dụ như `moduleName.spec.js`.
     
     _Tại sao:_
     > Một vài file thử nghiệm không có quan hệ cụ thể với bất kì một file thực thi nào. Bạn phải đưa nó vào trong 1 thư mục
-    nơi mà hầu hết được tìm bởi các developer: thư mục `__test__`. Tên `__test__` hiện tại cũng là chuẩn và được sử dụng bởi
+    ~~nơi mà hầu hết được tìm~~ **có nhiều khả năng được tìm thấy** (most likely to be found by) bởi các developer: thư mục `__test__`. Tên `__test__` hiện tại cũng là chuẩn và được sử dụng bởi
     hầu hết các Framework JavaScript thử nghiệm.
     
 * Viết những đoạn mã có thể thử nghiệm, tránh những sai sót, viết các hàm thuần túy.
@@ -39,7 +39,7 @@ theo quy ước, ví dụ như `moduleName.spec.js`.
     >Bạn muốn kiểm tra một logic kinh doanh như các đơn vị riêng biệt. Bạn phải
     "giảm thiểu tác động ngẫu nhiên và các quy trình không xác định đối với code của bạn"
     [Xem thêm...](https://medium.com/javascript-scene/tdd-the-rite-way-53c9b46f45e3)
-    > Một hàm thuẩn là một hàm mà luôn luôn trả về cùng một đầu ra.
+    > Một hàm thuẩn là một hàm mà luôn luôn trả ~~về cùng một đầu ra~~ **về cùng một đầu ra cho cùng một đầu vào** (the same output for the same input).
     Ngược lại một hàm không thuần là một hàm mà có những tác động bên ngoài hoặc phụ thuộc vào điều kiện từ bên ngoài để
     tạo ra giá trị. Nó khiến chúng khó lường trước được [Xem thêm...](https://hackernoon.com/structure-your-javascript-code-for-testability-9bc93d9c72dc)
 
